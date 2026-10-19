@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me | Go SangDae</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="index.html" class="brand">SANGDAE<span>.</span></a>
+
+        <div class="profile">
+            <img src="images/짱구이미지3.jpg" alt="고상대 프로필 사진">
+            <h2>Go SangDae</h2>
+            <p>Developer in Progress</p>
+        </div>
+
+        <nav class="navigation" aria-label="메인 메뉴">
+            <a href="index.html" class="nav-link"><span class="nav-icon">⌂</span> Home</a>
+            <a href="about.html" class="nav-link active" aria-current="page"><span class="nav-icon">○</span> About Me</a>
+            <a href="experience.html" class="nav-link"><span class="nav-icon">&lt;/&gt;</span> Experience</a>
+            <a href="skills.html" class="nav-link"><span class="nav-icon">✳</span> Skills</a>
+            <a href="education.html" class="nav-link"><span class="nav-icon">▤</span> Education</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-divider"></div>
+            <p class="small-label">LOCAL TIME</p>
+            <div id="time" class="clock">00:00:00</div>
+            <p class="location">INCHEON, KOREA</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="images/인스타.png">
+                </a>
+                <a href="https://www.kakao.com/" target="_blank" rel="noopener noreferrer" aria-label="Kakao">
+                    <img src="images/카카오.png">
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="images/깃허브.png">
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="topbar">
+            <span class="topbar-label">GET TO KNOW ME</span>
+            <span class="page-number">01 / ABOUT</span>
+        </div>
+
+        <header class="page-heading">
+            <p class="eyebrow">INTRODUCTION</p>
+            <h1>About <span>Me.</span></h1>
+            <p>저를 소개합니다.</p>
+        </header>
+
+        <section class="about-card" id="about-app">
+            <div class="about-card-mark">“</div>
+
+            <h2>{{ title }}</h2>
+            <p>{{ message }}</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">MY DIRECTION</p>
+                <h2>제가 나아가는 방향</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-number">01</span>
+                    <h3>꾸준한 학습</h3>
+                    <p>새로운 기술을 배우고 반복해서 실습하며 기초를 탄탄하게 다집니다.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-number">02</span>
+                    <h3>직접 구현하기</h3>
+                    <p>배운 내용을 실제 코드로 구현하며 작동 원리를 이해합니다.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-number">03</span>
+                    <h3>문제 해결</h3>
+                    <p>오류의 원인을 찾고 해결 방법을 고민하는 습관을 기릅니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <p class="eyebrow">CONTACT</p>
+                <h2>Contact Information</h2>
+            </div>
+
+            <div class="contact-list">
+                <div class="contact-row">
+                    <span>Email</span>
+                    <a href="mailto:test@naver.com">test@naver.com</a>
+                </div>
+                <div class="contact-row">
+                    <span>Location</span>
+                    <p>Incheon, Korea</p>
+                </div>
+                <div class="contact-row">
+                    <span>Interest</span>
+                    <p>Web Development · Full-Stack</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <span>GO SANGDAE</span>
+            <span>© <span class="current-year">2026</span> PERSONAL PORTFOLIO</span>
+        </footer>
+    </main>
+</div>
+</body>
+</html>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                title: "배움은 성장의 시작이라고 생각합니다.",
+                message: "프로그래밍에 관심이 생겨 개발자의 꿈을 키우고 있습니다. 현재 풀스택 부트캠프에서 다양한 기술을 배우고 있습니다."
+            };
+        }
+    }).mount("#about-app");
+</script>
